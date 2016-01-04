@@ -1,0 +1,308 @@
+body{
+	margin:0;
+	background:#ef8d31;
+}
+.container{
+	width:70%;
+	position:relative;
+	margin:0 auto;
+}
+.container:after{
+	content:'';
+	display:table;
+	clear:both;
+}
+.row{
+	padding:10px 0;
+}
+.row:before,
+.row:after{
+	content:'';
+	display:table;
+	clear:both;
+}
+.row>.col{
+	float:left;
+}
+.col-one-fourth{
+	width:25%;
+}
+/* Cards CSS */
+.card{
+	position:relative;
+	margin:0 auto;
+	width:90%;
+	background:#fff;
+	border-radius:5px;
+	line-height:1;
+	font-family: Helvetica, Arial;
+}
+.card:before{
+	content:'';
+	display:block;
+	padding-top:150%
+}
+.card-container{
+	padding:4%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.card-container .sign,
+.card-container .sign-rotate{
+	width:100%;
+	height:15%;
+	font-weight:bold;
+	font-family:Arial, Helvetica;
+}
+.card-container .sign-rotate{
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+}
+.card-container .symbol{
+	position:relative;
+	height:70%;
+	line-height:.99;
+}
+.card-A-spades .symbol, .card-A-clubs .symbol, .card-A-diamonds .symbol, .card-A-hearts .symbol,
+.card-J-spades .symbol, .card-J-clubs .symbol, .card-J-diamonds .symbol, .card-J-hearts .symbol,
+.card-K-spades .symbol, .card-K-clubs .symbol, .card-K-diamonds .symbol, .card-K-hearts .symbol,
+.card-Q-spades .symbol, .card-Q-clubs .symbol, .card-Q-diamonds .symbol, .card-Q-hearts .symbol{
+	line-height:.40
+}
+.card-container .symbol-small{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	line-height:.7;
+}
+.card-container .symbol:after{
+	white-space:pre;
+	display:block;
+	text-align:center;
+}
+.card-container .symbol-small:before{
+	position: absolute;
+	top:0;
+	left:0;	
+}
+.card-container .symbol-small:after{
+	position: absolute;
+	right:0;
+	bottom:0;
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+}
+.card-diag,
+.card-center {
+	background-color: #026873;
+	background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+	linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+	background-size: 13px, 29px, 37px, 53px;
+}
+div[class$="-hearts"],
+div[class$="-diamonds"]{
+	color:red
+}
+div[class$="-clubs"],
+div[class$="-spades"]{
+	color:black
+}
+div[class$="-hearts"] .symbol-small:before,
+div[class$="-hearts"] .symbol-small:after{
+	content:"\2665"
+}
+div[class$="-diamonds"] .symbol-small:before,
+div[class$="-diamonds"] .symbol-small:after{
+	content:"\2666"
+}
+div[class$="-clubs"] .symbol-small:before,
+div[class$="-clubs"] .symbol-small:after{
+	content:"\2663"
+}
+div[class$="-spades"] .symbol-small:before,
+div[class$="-spades"] .symbol-small:after{
+	content:"\2660"
+}
+.symbol-small:before{
+	margin-left:2%;
+}
+.symbol-small:after{
+	margin-right:2%;
+}
+
+.card-2-hearts .sign:after,
+.card-2-hearts .sign-rotate:after,
+.card-2-diamonds .sign:after,
+.card-2-diamonds .sign-rotate:after,
+.card-2-clubs .sign:after,
+.card-2-clubs .sign-rotate:after,
+.card-2-spades .sign:after,
+.card-2-spades .sign-rotate:after{content:"2"}
+.card-2-hearts .symbol:after{content:"\2665\a \a\2665"}
+.card-2-diamonds .symbol:after{content:"\2666\a \a\2666"}
+.card-2-clubs .symbol:after{content:"\2663\a \a\2663"}
+.card-2-spades .symbol:after{content:"\2660\a \a\2660"}
+
+.card-3-hearts .sign:after,
+.card-3-hearts .sign-rotate:after,
+.card-3-diamonds .sign:after,
+.card-3-diamonds .sign-rotate:after,
+.card-3-clubs .sign:after,
+.card-3-clubs .sign-rotate:after,
+.card-3-spades .sign:after,
+.card-3-spades .sign-rotate:after{content:"3"}
+.card-3-hearts .symbol:after{content:"\2665\a\2665\a\2665"}
+.card-3-diamonds .symbol:after{content:"\2666\a\2666\a\2666"}
+.card-3-clubs .symbol:after{content:"\2663\a\2663\a\2663"}
+.card-3-spades .symbol:after{content:"\2660\a\2660\a\2660"}
+
+.card-4-hearts .sign:after,
+.card-4-hearts .sign-rotate:after,
+.card-4-diamonds .sign:after,
+.card-4-diamonds .sign-rotate:after,
+.card-4-clubs .sign:after,
+.card-4-clubs .sign-rotate:after,
+.card-4-spades .sign:after,
+.card-4-spades .sign-rotate:after{content:"4"}
+.card-4-hearts .symbol:after{content:"\2665    \2665\a \a\2665    \2665"}
+.card-4-diamonds .symbol:after{content:"\2666    \2666\a \a\2666    \2666"}
+.card-4-clubs .symbol:after{content:"\2663    \2663\a \a\2663    \2663"}
+.card-4-spades .symbol:after{content:"\2660    \2660\a \a\2660    \2660"}
+
+.card-5-hearts .sign:after,
+.card-5-hearts .sign-rotate:after,
+.card-5-diamonds .sign:after,
+.card-5-diamonds .sign-rotate:after,
+.card-5-clubs .sign:after,
+.card-5-clubs .sign-rotate:after,
+.card-5-spades .sign:after,
+.card-5-spades .sign-rotate:after{content:"5"}
+.card-5-hearts .symbol:after{content:"\2665    \2665\a  \2665  \a\2665    \2665"}
+.card-5-diamonds .symbol:after{content:"\2666    \2666\a  \2666  \a\2666    \2666"}
+.card-5-clubs .symbol:after{content:"\2663    \2663\a  \2663  \a\2663    \2663"}
+.card-5-spades .symbol:after{content:"\2660    \2660\a  \2660  \a\2660    \2660"}
+
+.card-6-hearts .sign:after,
+.card-6-hearts .sign-rotate:after,
+.card-6-diamonds .sign:after,
+.card-6-diamonds .sign-rotate:after,
+.card-6-clubs .sign:after,
+.card-6-clubs .sign-rotate:after,
+.card-6-spades .sign:after,
+.card-6-spades .sign-rotate:after{content:"6"}
+.card-6-hearts .symbol:after{content:"\2665    \2665\a\2665    \2665\a\2665    \2665"}
+.card-6-diamonds .symbol:after{content:"\2666    \2666\a\2666    \2666\a\2666    \2666"}
+.card-6-clubs .symbol:after{content:"\2663    \2663\a\2663    \2663\a\2663    \2663"}
+.card-6-spades .symbol:after{content:"\2660    \2660\a\2660    \2660\a\2660    \2660"}
+
+.card-7-hearts .sign:after,
+.card-7-hearts .sign-rotate:after,
+.card-7-diamonds .sign:after,
+.card-7-diamonds .sign-rotate:after,
+.card-7-clubs .sign:after,
+.card-7-clubs .sign-rotate:after,
+.card-7-spades .sign:after,
+.card-7-spades .sign-rotate:after{content:"7"}
+.card-7-hearts .symbol:after{content:"\2665    \2665\a\2665   \2665   \2665\a\2665    \2665"}
+.card-7-diamonds .symbol:after{content:"\2666    \2666\a\2666   \2666   \2666\a\2666    \2666"}
+.card-7-clubs .symbol:after{content:"\2663    \2663\a\2663   \2663   \2663\a\2663    \2663"}
+.card-7-spades .symbol:after{content:"\2660    \2660\a\2660  \2660  \2660\a\2660    \2660"}
+
+.card-8-hearts .sign:after,
+.card-8-hearts .sign-rotate:after,
+.card-8-diamonds .sign:after,
+.card-8-diamonds .sign-rotate:after,
+.card-8-clubs .sign:after,
+.card-8-clubs .sign-rotate:after,
+.card-8-spades .sign:after,
+.card-8-spades .sign-rotate:after{content:"8"}
+.card-8-hearts .symbol:after{content:"\2665  \2665  \2665\a\2665   \2665\a\2665  \2665  \2665"}
+.card-8-diamonds .symbol:after{content:"\2666  \2666  \2666\a\2666   \2666\a\2666  \2666  \2666"}
+.card-8-clubs .symbol:after{content:"\2663  \2663  \2663\a\2663   \2663\a\2663  \2663  \2663"}
+.card-8-spades .symbol:after{content:"\2660  \2660  \2660\a\2660   \2660\a\2660  \2660  \2660"}
+
+.card-9-hearts .sign:after,
+.card-9-hearts .sign-rotate:after,
+.card-9-diamonds .sign:after,
+.card-9-diamonds .sign-rotate:after,
+.card-9-clubs .sign:after,
+.card-9-clubs .sign-rotate:after,
+.card-9-spades .sign:after,
+.card-9-spades .sign-rotate:after{content:"9"}
+.card-9-hearts .symbol:after{content:"\2665  \2665  \2665\a\2665  \2665  \2665\a\2665  \2665  \2665"}
+.card-9-diamonds .symbol:after{content:"\2666  \2666  \2666\a\2666  \2666  \2666\a\2666  \2666  \2666"}
+.card-9-clubs .symbol:after{content:"\2663  \2663  \2663\a\2663  \2663  \2663\a\2663  \2663  \2663"}
+.card-9-spades .symbol:after{content:"\2660  \2660  \2660\a\2660  \2660  \2660\a\2660  \2660  \2660"}
+
+.card-10-hearts .sign:after,
+.card-10-hearts .sign-rotate:after,
+.card-10-diamonds .sign:after,
+.card-10-diamonds .sign-rotate:after,
+.card-10-clubs .sign:after,
+.card-10-clubs .sign-rotate:after,
+.card-10-spades .sign:after,
+.card-10-spades .sign-rotate:after{content:"10"}
+.card-10-hearts .symbol:after{content:"\2665 \2665 \2665 \a\2665 \2665 \2665 \2665 \a\2665 \2665 \2665"}
+.card-10-diamonds .symbol:after{content:"\2666 \2666 \2666 \a\2666 \2666 \2666 \2666 \a\2666 \2666 \2666"}
+.card-10-clubs .symbol:after{content:"\2663 \2663 \2663 \a\2663 \2663 \2663 \2663 \a\2663 \2663 \2663"}
+.card-10-spades .symbol:after{content:"\2660 \2660 \2660 \a\2660 \2660 \2660 \2660 \a\2660 \2660 \2660"}
+
+.card-A-hearts .sign:after,
+.card-A-hearts .sign-rotate:after,
+.card-A-diamonds .sign:after,
+.card-A-diamonds .sign-rotate:after,
+.card-A-clubs .sign:after,
+.card-A-clubs .sign-rotate:after,
+.card-A-spades .sign:after,
+.card-A-spades .sign-rotate:after{content:"A"}
+.card-J-hearts .sign:after,
+.card-J-hearts .sign-rotate:after,
+.card-J-diamonds .sign:after,
+.card-J-diamonds .sign-rotate:after,
+.card-J-clubs .sign:after,
+.card-J-clubs .sign-rotate:after,
+.card-J-spades .sign:after,
+.card-J-spades .sign-rotate:after{content:"J"}
+.card-K-hearts .sign:after,
+.card-K-hearts .sign-rotate:after,
+.card-K-diamonds .sign:after,
+.card-K-diamonds .sign-rotate:after,
+.card-K-clubs .sign:after,
+.card-K-clubs .sign-rotate:after,
+.card-K-spades .sign:after,
+.card-K-spades .sign-rotate:after{content:"K"}
+.card-Q-hearts .sign:after,
+.card-Q-hearts .sign-rotate:after,
+.card-Q-diamonds .sign:after,
+.card-Q-diamonds .sign-rotate:after,
+.card-Q-clubs .sign:after,
+.card-Q-clubs .sign-rotate:after,
+.card-Q-spades .sign:after,
+.card-Q-spades .sign-rotate:after{content:"Q"}
+.card-A-hearts .symbol:after,
+.card-J-hearts .symbol:after,
+.card-K-hearts .symbol:after,
+.card-Q-hearts .symbol:after{content:"\a \2665"}
+.card-A-diamonds .symbol:after,
+.card-J-diamonds .symbol:after,
+.card-K-diamonds .symbol:after,
+.card-Q-diamonds .symbol:after{content:"\a \2666"}
+.card-A-clubs .symbol:after,
+.card-J-clubs .symbol:after,
+.card-K-clubs .symbol:after,
+.card-Q-clubs .symbol:after{content:"\a \2663"}
+.card-A-spades .symbol:after,
+.card-J-spades .symbol:after,
+.card-K-spades .symbol:after,
+.card-Q-spades .symbol:after{content:"\a \2660"}

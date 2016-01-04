@@ -1,5 +1,5 @@
 # CSS-Cards
-CSS cards with pure CSS. Tested with modern browsers and works good.
+CSS cards with pure CSS. Tested with modern browsers.
 
 
 ##Required libraries for text responsiveness:
